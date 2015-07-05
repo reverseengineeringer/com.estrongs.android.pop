@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textColor="@color/popupbox_content_text" android:id="@id/cbxApplyToAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:button="@drawable/popupbox_checkbox_drawable" android:text="@string/action_apply_to_all" />
+</LinearLayout>

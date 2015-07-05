@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.pop.esclasses.ESDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/port_body_main" />
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="start" android:id="@id/start_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="end" android:id="@id/end_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.estrongs.android.pop.esclasses.ESDrawerLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Επιλογή</string>
+    <string name="app_name">ES Εξερεύνηση αρχείων</string>
+    <string name="app_media_player">ES Αναπαραγωγέας Ήχου/Βίντεο</string>
+    <string name="app_note_editor">ES Επεξεργαστής κειμένου</string>
+    <string name="app_image_browser">ES Πλοηγός εικόνων</string>
+    <string name="app_zip_viewer">ES Προβολέας αρχείων zip</string>
+    <string name="app_downloader">ES Διαχειριστής λήψεων</string>
+    <string name="select_device_to_share">Επιλογή συσκευής για αποστολή</string>
+    <string name="es_share_name_activity">Αποστολή μέσω τοπικού δικτύου</string>
+    <string name="save_to_es">ES Αποθήκευση σε</string>
+</resources>

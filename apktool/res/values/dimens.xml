@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edittext_padding_horizontal">3.0dip</dimen>
+    <dimen name="bottom_menu_basic_height">54.0dip</dimen>
+    <dimen name="preference_icon_minWidth">0.0dip</dimen>
+    <dimen name="preference_item_padding_side">8.0dip</dimen>
+    <dimen name="preference_item_padding_inner">8.0dip</dimen>
+    <dimen name="preference_widget_width">48.0dip</dimen>
+    <dimen name="indicator_right_padding">10.0dip</dimen>
+    <dimen name="indicator_corner_radius">12.0dip</dimen>
+    <dimen name="indicator_internal_padding">4.0dip</dimen>
+    <dimen name="header_footer_left_right_padding">70.0dip</dimen>
+    <dimen name="header_footer_top_bottom_padding">12.0dip</dimen>
+</resources>

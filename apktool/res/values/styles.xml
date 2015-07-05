@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dialog_menu" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/blank</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@drawable/blank</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="Animation_nemu">
+        <item name="android:windowEnterAnimation">@anim/animation_menu_in</item>
+        <item name="android:windowExitAnimation">@anim/animation_menu_out</item>
+    </style>
+    <style name="textShadow" />
+    <style name="Animation_longclick_menu">
+        <item name="android:windowEnterAnimation">@anim/animation_longclick_menu_window</item>
+        <item name="android:windowExitAnimation">@anim/animation_longclick_menu_window</item>
+    </style>
+    <style name="editInputText">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/popupbox_input_bg</item>
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingRight">6.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <style name="common_alert_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/blank</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@drawable/blank</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="section_title_style" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">4.0dip</item>
+        <item name="android:paddingBottom">4.0dip</item>
+    </style>
+    <style name="item_style" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:paddingTop">4.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+    </style>
+    <style name="check_box_style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:button">@drawable/popupbox_checkbox_drawable</item>
+    </style>
+    <style name="textPreferenceCategory">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/translucent_background_80</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <style name="Widget.Holo.CompoundButton" parent="@android:style/Widget.CompoundButton" />
+    <style name="TextAppearance.Holo.Small" parent="@android:style/TextAppearance.Small" />
+    <style name="TextAppearance.Holo.Widget.Switch" parent="@style/TextAppearance.Holo.Small" />
+    <style name="TextAppearance.Holo.Light.Widget.Switch" parent="@android:style/TextAppearance.Small.Inverse">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Widget.Holo.CompoundButton.Switch" parent="@style/Widget.Holo.CompoundButton">
+        <item name="thumb">@drawable/switch_inner_holo_dark</item>
+        <item name="track">@drawable/switch_track_holo_dark</item>
+        <item name="textOn">@string/capital_on</item>
+        <item name="textOff">@string/capital_off</item>
+        <item name="thumbTextPadding">12.0dip</item>
+        <item name="switchTextAppearance">@style/TextAppearance.Holo.Widget.Switch</item>
+        <item name="switchMinWidth">96.0dip</item>
+        <item name="switchPadding">16.0dip</item>
+    </style>
+    <style name="Widget.CompoundButton.Switch" parent="@android:style/Widget.CompoundButton">
+        <item name="textOn">@string/capital_on</item>
+        <item name="textOff">@string/capital_off</item>
+    </style>
+    <style name="Widget.Holo.Light.CompoundButton.Switch" parent="@style/Widget.CompoundButton.Switch">
+        <item name="thumb">@drawable/switch_inner_holo_light</item>
+        <item name="track">@drawable/switch_track_holo_light</item>
+        <item name="textOn">@string/capital_on</item>
+        <item name="textOff">@string/capital_off</item>
+        <item name="thumbTextPadding">12.0dip</item>
+        <item name="switchTextAppearance">@android:style/TextAppearance.Small.Inverse</item>
+        <item name="switchMinWidth">96.0dip</item>
+        <item name="switchPadding">16.0dip</item>
+    </style>
+    <style name="Preference">
+        <item name="android:layout">@layout/custom_preference</item>
+    </style>
+    <style name="Preference.SwitchPreference" parent="@style/Preference">
+        <item name="android:widgetLayout">@layout/preference_widget_switch</item>
+        <item name="switchTextOn">@string/capital_on</item>
+        <item name="switchTextOff">@string/capital_off</item>
+    </style>
+    <style name="Preference.Holo" parent="@style/Preference">
+        <item name="android:layout">@layout/preference_holo</item>
+    </style>
+    <style name="Preference.Holo.SwitchPreference" parent="@style/Preference.Holo">
+        <item name="android:widgetLayout">@layout/preference_widget_switch</item>
+        <item name="switchTextOn">@string/capital_on</item>
+        <item name="switchTextOff">@string/capital_off</item>
+    </style>
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@drawable/setting_title_bg</item>
+    </style>
+    <style name="preferenceTitlebar" parent="@android:style/Theme">
+        <item name="android:windowTitleSize">48.0dip</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+    <style name="cursorTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <style name="HorizontalProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">12.0dip</item>
+        <item name="android:progressDrawable">@drawable/progressbar_green</item>
+        <item name="android:minHeight">12.0dip</item>
+    </style>
+    <style name="ProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_drawable</item>
+    </style>
+    <style name="NoActionBar" parent="@android:style/Theme" />
+    <style name="Theme" parent="@android:style/Theme">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+    </style>
+    <style name="Theme.Holo" parent="@android:style/Theme.Holo">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="switchPreferenceStyle">@style/Preference.Holo.SwitchPreference</item>
+    </style>
+    <style name="Theme.Holo.Light" parent="@android:style/Theme.Holo.Light">
+        <item name="switchStyle">@style/Widget.Holo.Light.CompoundButton.Switch</item>
+        <item name="switchPreferenceStyle">@style/Preference.Holo.SwitchPreference</item>
+    </style>
+</resources>

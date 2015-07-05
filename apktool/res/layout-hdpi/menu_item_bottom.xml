@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/background_globle_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="@dimen/toolbar_text_size" android:gravity="center|top" android:id="@id/button_menu_bottom" android:background="@drawable/blank" android:paddingTop="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_select" android:singleLine="true" />
+</LinearLayout>

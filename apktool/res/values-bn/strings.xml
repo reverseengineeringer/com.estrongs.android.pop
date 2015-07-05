@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">নির্বাচন করুন</string>
+    <string name="app_name">ES ফাইল ব্রাউজার</string>
+    <string name="app_media_player">ES মিডিয়া প্লেয়ার</string>
+    <string name="app_note_editor">ES টেক্সট রিডার</string>
+    <string name="app_image_browser">ES চিত্র ব্রাউজার</string>
+    <string name="app_zip_viewer">ES কম্প্রেশন দর্শনকারী</string>
+    <string name="app_downloader">ES ডাউনলোডার</string>
+    <string name="select_device_to_share">পাঠাতে ডিভাইস নির্বাচন করুনম</string>
+    <string name="es_share_name_activity">ES নেটওয়ার্ক পাঠান</string>
+    <string name="save_to_es">ES সংরক্ষণ করুন</string>
+</resources>

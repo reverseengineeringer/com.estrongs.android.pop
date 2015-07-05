@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Pilih</string>
+    <string name="app_name">ES Penjelajah File</string>
+    <string name="app_media_player">ES Pemutar Media</string>
+    <string name="app_note_editor">ES Editor Catatan</string>
+    <string name="app_image_browser">ES Browser Gambar</string>
+    <string name="app_zip_viewer">ES Pembuka Zip</string>
+    <string name="app_downloader">ES Pengunduh</string>
+    <string name="select_device_to_share">Pilih perangkat untuk mengirim</string>
+    <string name="es_share_name_activity">Kirim dengan LAN</string>
+    <string name="save_to_es">ES Simpan Ke</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/bottom_menu_playing" android:background="@drawable/toolbar_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/preview_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_preview" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/app_new_audio_prev" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/repeat_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_repeat" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/app_new_audio_repeat" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/play_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_play" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/app_new_audio_ctrl_play" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/shuffle_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_shuffle" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/app_new_audio_ctrl_shuffle" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/next_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_next" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/app_new_audio_ctrl_next" android:scaleType="centerInside" />
+    </LinearLayout>
+</LinearLayout>

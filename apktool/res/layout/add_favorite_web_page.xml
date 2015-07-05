@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:stretchColumns="1" android:shrinkColumns="1">
+        <TableRow android:paddingTop="6.0dip" android:paddingBottom="6.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/url" android:text="@string/property_location" />
+            <EditText android:id="@id/input_url" android:layout_marginLeft="6.0dip" android:singleLine="true" android:inputType="textWebEditText" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:paddingTop="6.0dip" android:paddingBottom="6.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/name" android:text="@string/favorite_label_name" />
+            <EditText android:id="@id/input_name" android:layout_marginLeft="6.0dip" android:singleLine="true" android:inputType="textWebEditText" style="@style/editInputText" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

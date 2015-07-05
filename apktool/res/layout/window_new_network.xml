@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="9.0dip" android:stretchColumns="1" android:shrinkColumns="1">
+        <TableRow android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_email" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_account" android:singleLine="true" />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/edittext_email_new_network" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_pw" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_password" android:singleLine="true" />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/edittext_passwd_new_network" android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="textPassword" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:id="@id/nn_sina_weibo_account_row" android:visibility="gone" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <CheckBox android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:layout_gravity="center|left" android:id="@id/nn_is_weibo_account" android:layout_width="wrap_content" android:layout_height="@dimen/dp_24" android:button="@drawable/popupbox_checkbox_drawable" android:text="@string/sinaWeibo" />
+        </TableRow>
+        <TableRow android:id="@id/nn_s3_location_row" android:visibility="gone" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_location" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/s3_location_text" android:singleLine="true" />
+            <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/s3_set_location" android:background="@drawable/popupbox_select_bg" android:paddingLeft="5.0dip" android:paddingRight="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ftp_codepage_set" />
+        </TableRow>
+        <TableRow android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_display" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_location_display" android:singleLine="true" />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/edittext_displayas_new_network" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/editInputText" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

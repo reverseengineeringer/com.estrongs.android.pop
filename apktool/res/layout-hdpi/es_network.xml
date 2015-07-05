@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/textbar_top" android:background="@drawable/main_titlebar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_titlebar_text" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_net_manager" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/toolbar_top" android:background="@drawable/toolbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_43" android:layout_below="@id/textbar_top">
+        <LinearLayout android:gravity="center" android:id="@id/container_return" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent">
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/tool_return" android:layout_width="@dimen/toolbar_icon_size" android:layout_height="@dimen/toolbar_icon_size" android:src="@drawable/toolbar_return" android:scaleType="centerInside" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/main_addressbar_text" android:ellipsize="end" android:layout_gravity="center" android:id="@id/tool_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/es_net_title" android:singleLine="true" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/toolbar_bottom" android:background="@drawable/toolbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@color/grey_create_new_window" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/toolbar_bottom" android:layout_below="@id/toolbar_top">
+        <FrameLayout android:id="@id/body_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/listview" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/content_listview_selector" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/shadow_tools_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar_top" />
+</RelativeLayout>

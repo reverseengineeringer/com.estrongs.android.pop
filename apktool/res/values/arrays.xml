@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="view_item_names">
+        <item>Large Icon</item>
+        <item>Medium Icon</item>
+        <item>Small Icon</item>
+        <item>Large List</item>
+        <item>Medium List</item>
+        <item>Small List</item>
+        <item>Large Detail</item>
+        <item>Medium Detail</item>
+        <item>Small Detail</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Poor</item>
+        <item>Fair</item>
+        <item>Good</item>
+        <item>Excellent</item>
+    </string-array>
+    <string-array name="wifi_statuses">
+        <item></item>
+        <item>Scanning…</item>
+        <item>Connecting…</item>
+        <item>Authenticating…</item>
+        <item>Obtaining IP address…</item>
+        <item>Connected</item>
+        <item>Suspended</item>
+        <item>Disconnecting…</item>
+        <item>Disconnected</item>
+        <item>Unsuccessful</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Scanning…</item>
+        <item>Connecting to %1$s…</item>
+        <item>Authenticating with %1$s…</item>
+        <item>Obtaining IP address from %1$s…</item>
+        <item>Connected to %1$s</item>
+        <item>Suspended</item>
+        <item>Disconnecting from %1$s…</item>
+        <item>Disconnected</item>
+        <item>Unsuccessful</item>
+    </string-array>
+    <string-array name="new_navi_groups">
+        <item>Favorite</item>
+        <item>Local</item>
+        <item>Library</item>
+        <item>Network</item>
+        <item>Tools</item>
+    </string-array>
+    <string-array name="theme_folders">
+        <item>Default</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="netdisk_names">
+        <item>Box</item>
+        <item>SugarSync</item>
+        <item>DropBox</item>
+        <item>OneDrive</item>
+        <item>Gdrive</item>
+        <item>S3</item>
+        <item>Yandex</item>
+        <item>KuaiPan</item>
+        <item>KanBox</item>
+        <item>Sina VDisk</item>
+        <item>Baidu NetDisk</item>
+        <item>MediaFire</item>
+    </string-array>
+    <string-array name="search_condition_size">
+        <item>All</item>
+        <item>0 – 100 KB</item>
+        <item>100KB - 1 MB</item>
+        <item>1 MB - 16 MB</item>
+        <item>16 MB - 128 MB</item>
+        <item>> 128 MB</item>
+        <item>Input</item>
+    </string-array>
+    <string-array name="search_condition_date">
+        <item>All</item>
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>This week</item>
+        <item>This month</item>
+        <item>This year</item>
+        <item>> 1 year</item>
+        <item>Input</item>
+    </string-array>
+    <string-array name="zip_levels">
+        <item>Store</item>
+        <item>Fast</item>
+        <item>Standard</item>
+        <item>Best</item>
+    </string-array>
+    <string-array name="image_slide_interval">
+        <item>1 s</item>
+        <item>3 s</item>
+        <item>5 s</item>
+        <item>10 s</item>
+        <item>15 s</item>
+    </string-array>
+    <string-array name="pick_and_return_file_entries">
+        <item>"Normal Android Way
+(For MMS,Gmail,…)"</item>
+        <item>"File Way
+(Try this if above fails)"</item>
+    </string-array>
+    <string-array name="diskusage_sort_entries">
+        <item>Name</item>
+        <item>Type</item>
+        <item>Size</item>
+    </string-array>
+    <string-array name="line_terminator_entries">
+        <item>DOS Terminators - CR/LF</item>
+        <item>UNIX Terminators - LF</item>
+        <item>MAC Terminators - CR</item>
+    </string-array>
+    <string-array name="search_engine_entries">
+        <item>Auto</item>
+        <item>Baidu</item>
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>Yandex</item>
+        <item>Naver</item>
+        <item>Amazon</item>
+    </string-array>
+    <string-array name="image_slide_interval_values">
+        <item>1000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+    </string-array>
+    <string-array name="line_terminator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="wifi_security">
+        <item>Open</item>
+        <item>WEP</item>
+        <item>WPA/WPA2 PSK</item>
+        <item>802.1x EAP</item>
+    </string-array>
+    <string-array name="wifi_ap_security">
+        <item>Open</item>
+        <item>WPA2 PSK</item>
+    </string-array>
+    <string-array name="ftp_codepage_entries">
+        <item>Auto</item>
+        <item>Unicode(UTF-8)</item>
+        <item>Simplified Chinese(GBK)</item>
+        <item>Western Europe(ISO–8859–1)</item>
+        <item>Western languages(Windows)</item>
+        <item>Korean(EUC-KR)</item>
+        <item>Japanese(EUC-JP)</item>
+        <item>Japanese(Shift_JIS)</item>
+        <item>Japanese(ISO-2022-JP)</item>
+        <item>Traditional Chinese(BIG5)</item>
+        <item>Cyrillic(Windows-1251)</item>
+        <item>Cp866(Russian DOS)</item>
+        <item>ISO–8859–2</item>
+        <item>ISO–8859–3</item>
+        <item>ISO–8859–4</item>
+        <item>Cyrillic alphabet(ISO–8859–5)</item>
+        <item>Arabic(ISO–8859–6)</item>
+        <item>Greek(ISO–8859–7)</item>
+        <item>Hebrew(ISO–8859–8)</item>
+        <item>ISO–8859–9</item>
+        <item>ISO–8859–10</item>
+        <item>Thai(ISO–8859–11)</item>
+        <item>ISO–8859–13</item>
+        <item>ISO–8859–14</item>
+        <item>ISO–8859–15</item>
+        <item>ISO–8859–16</item>
+        <item>ANSI(ASCII)</item>
+        <item>Unicode(UTF-16LE)</item>
+        <item>Unicode(UTF-16BE)</item>
+    </string-array>
+    <string-array name="preference_language_setting_entries">
+        <item>Auto</item>
+        <item>Bulgarian</item>
+        <item>Català</item>
+        <item>čeština</item>
+        <item>Deutsch</item>
+        <item>English</item>
+        <item>español</item>
+        <item>ελληνικά</item>
+        <item>Finnish</item>
+        <item>français</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Italiano</item>
+        <item>Korean</item>
+        <item>Lithuanian</item>
+        <item>Nederlands</item>
+        <item>Romanian</item>
+        <item>فارسی</item>
+        <item>русский</item>
+        <item>polski</item>
+        <item>português(Brasil)</item>
+        <item>português(Portugal)</item>
+        <item>العربية</item>
+        <item>slovenských</item>
+        <item>Swedish</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>தமிழ்</item>
+        <item>ئۇيغۇرچە</item>
+        <item>Ukrainian</item>
+        <item>Việt Nam</item>
+        <item>বাংলা ভাষা</item>
+        <item>עברית</item>
+        <item>中文(简体)</item>
+        <item>中文(繁體)</item>
+        <item>日本語</item>
+        <item>ಕನ್ನಡ</item>
+    </string-array>
+    <string-array name="preference_language_setting_values">
+        <item>-1</item>
+        <item>bg</item>
+        <item>ca</item>
+        <item>cs</item>
+        <item>de</item>
+        <item>en</item>
+        <item>es</item>
+        <item>el</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>hu</item>
+        <item>in</item>
+        <item>it</item>
+        <item>ko</item>
+        <item>lt</item>
+        <item>nl</item>
+        <item>ro</item>
+        <item>fa</item>
+        <item>ru</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>pt_pt</item>
+        <item>ar</item>
+        <item>sk</item>
+        <item>sv</item>
+        <item>th</item>
+        <item>tr</item>
+        <item>ta</item>
+        <item>ug</item>
+        <item>uk</item>
+        <item>vi</item>
+        <item>bn</item>
+        <item>iw</item>
+        <item>cn</item>
+        <item>tw</item>
+        <item>ja</item>
+        <item>kn</item>
+    </string-array>
+    <string-array name="pcs_category">
+        <item>All Files</item>
+        <item>Image</item>
+        <item>Document</item>
+        <item>Music</item>
+        <item>Video</item>
+        <item>Application</item>
+        <item>Others</item>
+        <item>My Download</item>
+    </string-array>
+    <string-array name="search_engine_values">
+        <item>auto</item>
+        <item>baidu</item>
+        <item>google</item>
+        <item>yahoo</item>
+        <item>yandex</item>
+        <item>naver</item>
+        <item>amazon</item>
+    </string-array>
+</resources>

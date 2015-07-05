@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/theme_item_custom_layout" android:background="@drawable/background_theme_item" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="@dimen/dp_66" android:layout_height="@dimen/dp_72" android:layout_alignParentRight="true">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center" android:id="@id/theme_item_download_image" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:src="@drawable/toolbar_download" android:scaleType="centerInside" />
+            <RadioButton android:gravity="center" android:layout_gravity="center" android:id="@id/theme_item_radio_button" android:clickable="false" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:button="@drawable/radio_button_drawable" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/theme_item_divider" android:background="@drawable/theme_content_sp" android:layout_width="wrap_content" android:layout_height="@dimen/dp_72" android:layout_toLeftOf="@id/theme_item_custom_layout" />
+    <LinearLayout android:gravity="center" android:id="@id/theme_item_content_layout" android:background="@drawable/background_theme_item" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/dp_72" android:layout_toLeftOf="@id/theme_item_divider">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/theme_item_image" android:layout_width="@dimen/dp_184" android:layout_height="@dimen/dp_56" android:scaleType="fitEnd" android:layout_centerVertical="true" />
+            <com.estrongs.android.widget.ProgressTextView android:textSize="@dimen/dp_12" android:textColor="@color/white" android:gravity="center" android:id="@id/theme_item_label" android:background="@drawable/disk_content_statistics_bg" android:layout_width="@dimen/dp_184" android:layout_height="wrap_content" android:layout_alignBottom="@id/theme_item_image" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

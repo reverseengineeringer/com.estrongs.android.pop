@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_120"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_18" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/album_name" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_55" android:layout_marginLeft="15.0dip" android:singleLine="true" android:layout_weight="1.0" />
+    <CheckBox android:textColor="@color/black" android:id="@id/album_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:button="@drawable/checkbox_grid_file_drawable" />
+    <RadioButton android:textColor="@color/black" android:id="@id/album_radio" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:button="@drawable/radio_button_drawable" />
+</LinearLayout>

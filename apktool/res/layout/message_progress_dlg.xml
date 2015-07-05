@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:id="@id/tryroot_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="14.0dip" android:text="@string/tryroot_msg" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/tryroot_progress" android:background="#00000000" android:visibility="invisible" android:layout_width="@dimen/dp_64" android:layout_height="@dimen/dp_64" style="@style/ProgressBar" />
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/scan_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_200" style="@style/ProgressBar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/album_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/album_list" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:cacheColorHint="@color/transparent" android:divider="#ffafafaf" android:dividerHeight="1.0dip" android:layout_weight="1.0" />
+        <View android:background="#ffafafaf" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/new_album" android:layout_width="fill_parent" android:layout_height="@dimen/dp_60" android:layout_marginLeft="15.0dip">
+            <EditText android:textSize="@dimen/dp_18" android:id="@id/new_album_name" android:background="@drawable/popupbox_input_bg" android:paddingLeft="4.0dip" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:hint="@string/album_custom" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" />
+            <CheckBox android:textColor="@color/black" android:id="@id/new_album_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:button="@drawable/checkbox_grid_file_drawable" />
+            <RadioButton android:textColor="@color/black" android:id="@id/new_album_radio" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:button="@drawable/radio_button_drawable" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

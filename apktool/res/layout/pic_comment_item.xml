@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/comment_page" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/author_panel" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_12" android:textColor="#ff00ccff" android:id="@id/author" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="testuser" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="#ffbcbcbc" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 hours before" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dp_12" android:textColor="#ffbcbcbc" android:id="@id/comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="It's nice" android:layout_below="@id/author_panel" android:layout_alignParentBottom="true" />
+</RelativeLayout>

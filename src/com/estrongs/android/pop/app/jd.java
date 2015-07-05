@@ -1,0 +1,22 @@
+package com.estrongs.android.pop.app;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+class jd
+  extends BroadcastReceiver
+{
+  jd(PopVideoPlayer paramPopVideoPlayer) {}
+  
+  public void onReceive(Context paramContext, Intent paramIntent)
+  {
+    a.j = false;
+  }
+}
+
+/* Location:
+ * Qualified Name:     com.estrongs.android.pop.app.jd
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

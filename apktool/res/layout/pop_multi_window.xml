@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.ui.drag.DragLayer android:id="@id/drag_window_layer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/body_view" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/row1" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/row2" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/row3" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/row4" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/row5" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/row6" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <com.estrongs.android.ui.view.PopMultiWindowGrid android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.estrongs.android.ui.drag.DragLayer>

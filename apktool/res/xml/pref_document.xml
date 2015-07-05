@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:icon="@drawable/setting_icon_document" android:layout="@layout/tablet_preference" android:title="@string/preference_document_title" android:key="document_preference"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/document_ext_setttings_title" android:key="document_ext_list" android:summary="@string/document_ext_setttings_title_summary">
+        <intent android:action="com.estrongs.action.DOCUMENT_EXT_MODIFY_LIST" />
+    </Preference>
+</PreferenceScreen>

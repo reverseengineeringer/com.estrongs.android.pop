@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.ui.drag.DragLayer android:id="@id/drag_window_layer" android:background="#bb000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/row1" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid3" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/row2" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid3" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/row3" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid3" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/row4" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid1" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.estrongs.android.ui.drag.DragWindowView android:gravity="center" android:id="@id/grid3" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</com.estrongs.android.ui.drag.DragLayer>

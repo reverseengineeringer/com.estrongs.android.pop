@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background" android:drawable="@drawable/app_audio_progress_default" />
+    <item android:id="@android:id/secondaryProgress" android:drawable="@drawable/app_audio_progress_default" />
+    <item android:id="@android:id/progress">
+        <clip android:gravity="left" android:clipOrientation="horizontal">
+            <nine-patch android:src="@drawable/app_audio_progress_going" android:dither="true" />
+        </clip>
+    </item>
+</layer-list>

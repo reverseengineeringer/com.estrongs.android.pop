@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/filemgr_upgrade_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:minHeight="120.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+            <ProgressBar android:id="@id/upgrade_checking" android:layout_width="@dimen/dp_45" android:layout_height="@dimen/dp_45" android:layout_marginLeft="10.0dip" android:layout_marginBottom="5.0dip" style="@style/ProgressBar" />
+            <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:id="@id/upgrade_show_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginBottom="5.0dip" android:text="" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/upgrade_download_progress" android:layout_width="fill_parent" android:layout_height="@dimen/dp_10" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" style="@style/HorizontalProgressBar" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/upgrade_download_progresss_text_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dp_20" android:layout_marginTop="8.0dip">
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/upgrade_download_percent" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="0%" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/upgrade_download_size" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="0" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/upgrade_auto_cfg_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dp_40">
+            <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center_vertical" android:id="@id/upgrade_disable_auto_check" android:background="@drawable/background_content_grid" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/popupbox_checkbox_unchecked" />
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/upgrade_cancel_auto_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:text="@string/upgrade_cancel_auto" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

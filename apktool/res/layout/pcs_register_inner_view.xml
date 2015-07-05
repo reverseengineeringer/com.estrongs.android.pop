@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:indeterminateDrawable="@drawable/progress_drawable" android:layout_centerInParent="true" android:layout_centerHorizontal="false" android:layout_centerVertical="false" />
+    <ScrollView android:paddingLeft="1.0dip" android:paddingRight="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+            <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" android:stretchColumns="1" android:shrinkColumns="1">
+                <TableRow android:layout_marginTop="7.0dip" android:layout_marginBottom="6.0dip">
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_email" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_account" android:singleLine="true" />
+                    <EditText android:textColor="@color/popupbox_content_text" android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/pcs_register_number_hint" android:inputType="number" style="@style/editInputText" />
+                </TableRow>
+                <TableRow android:layout_marginBottom="7.0dip">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/phone_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_register_number_subhint" />
+                </TableRow>
+                <TableRow android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_pw" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_password" android:singleLine="true" />
+                    <EditText android:textColor="@color/popupbox_content_text" android:id="@id/password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/pcs_login_password_hint" android:inputType="textPassword" style="@style/editInputText" />
+                </TableRow>
+            </TableLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/login_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+                <View android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/login_now" android:background="@drawable/background_content_grid" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/login_now1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_if_registered" />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/login_now2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/blue_link" android:id="@id/login_now3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_login" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

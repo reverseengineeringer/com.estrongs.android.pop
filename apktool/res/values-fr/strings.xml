@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Sélectionner</string>
+    <string name="app_name">ES Explorateur de Fichiers</string>
+    <string name="app_media_player">ES Lecteur Multimédia</string>
+    <string name="app_note_editor">ES Editeur de Texte</string>
+    <string name="app_image_browser">ES Galerie</string>
+    <string name="app_zip_viewer">ES Explorateur ZIP</string>
+    <string name="app_downloader">ES Downloader</string>
+    <string name="select_device_to_share">Sélectionnez un destinataire</string>
+    <string name="es_share_name_activity">Envoyé par le réseau</string>
+    <string name="save_to_es">ES Enregistrer sous</string>
+</resources>

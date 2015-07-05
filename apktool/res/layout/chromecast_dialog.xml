@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:gravity="center_vertical" android:id="@android:id/message" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:lineSpacingExtra="8.0dip" style="?android:attr/textAppearanceMedium" />
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/main_content_detail_text" android:gravity="center_vertical" android:id="@id/submessage" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:lineSpacingExtra="8.0dip" style="?android:attr/textAppearanceMedium" />
+    <ListView android:id="@id/device_list" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

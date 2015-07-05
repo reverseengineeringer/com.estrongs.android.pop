@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/header_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:baselineAligned="false">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:baselineAligned="false">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/nums_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/diskusage_column_num" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/colon" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/nums_completed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/nums_of_files" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:baselineAligned="false">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/file_compressing_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progress_compressing_entry" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:gravity="left" android:id="@id/file_compressing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="@string/waiting_message" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/total_size_compressed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/total_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/precent_completed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/archive_total_progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/dp_12" android:layout_marginTop="6.0dip" style="@style/HorizontalProgressBar" />
+    </LinearLayout>
+</LinearLayout>

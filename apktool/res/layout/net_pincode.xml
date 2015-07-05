@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:padding="8.0dip" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1" android:shrinkColumns="1">
+        <TableRow android:id="@id/pincode_old_passwd_row" android:focusable="false" android:focusableInTouchMode="false">
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/pincode_old_passwd_txt" android:focusable="false" android:focusableInTouchMode="false" android:text="Old Password : " />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/pincode_old_passwd" android:focusable="true" android:focusableInTouchMode="true" android:cursorVisible="true" android:inputType="textPassword" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:id="@id/pincode_username_row">
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/pincode_username_txt" android:text="Username : " />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/pincode_username" android:cursorVisible="true" android:inputType="text" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:focusable="false" android:focusableInTouchMode="false" android:layout_marginTop="8.0dip">
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/pincode_new_passwd_txt" android:focusable="false" android:focusableInTouchMode="false" android:text="New Password : " />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/pincode_new_passwd" android:focusable="true" android:focusableInTouchMode="true" android:cursorVisible="true" android:inputType="textPassword" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:id="@id/pincode_confirm_passwd_row" android:focusable="false" android:focusableInTouchMode="false" android:layout_marginTop="8.0dip">
+            <TextView android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/pincode_confirm_passwd_txt" android:focusable="false" android:focusableInTouchMode="false" android:text="@string/net_passwd_confirm" />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/pincode_confirm_passwd" android:focusable="true" android:focusableInTouchMode="true" android:cursorVisible="true" android:inputType="textPassword" style="@style/editInputText" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

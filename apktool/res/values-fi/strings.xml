@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Valitse</string>
+    <string name="app_name">ES-resurssienhallinta</string>
+    <string name="app_media_player">ES-mediasoitin</string>
+    <string name="app_note_editor">ES Note Editor</string>
+    <string name="app_image_browser">ES-kuvaselain</string>
+    <string name="app_zip_viewer">ES Zip Viewer</string>
+    <string name="app_downloader">ES-lataaja</string>
+    <string name="select_device_to_share">Select a device to send</string>
+    <string name="es_share_name_activity">Send by LAN</string>
+    <string name="save_to_es">ES Tallenna kohteeseen</string>
+</resources>

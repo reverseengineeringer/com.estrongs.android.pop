@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:gravity="center_vertical" android:id="@android:id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:text="@string/es_use_prompt_message" />
+    <include android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/block_item_device" />
+</LinearLayout>

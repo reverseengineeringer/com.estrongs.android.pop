@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/tablet_preference" android:title="@string/open_default_window" android:key="default_window" android:summary="@string/preference_default_window_summary" />
+</PreferenceScreen>

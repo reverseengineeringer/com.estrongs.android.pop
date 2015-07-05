@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dp_80" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/icon" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:layout_marginTop="8.0dip" android:src="@drawable/format_picture" />
+    <TextView android:textSize="@dimen/home_block_item_text_size" android:textColor="@color/main_content_text" android:gravity="center" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="@dimen/dp_18" android:text="@string/category_picture" android:singleLine="true" />
+    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="center" android:id="@id/count" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16" android:layout_marginBottom="8.0dip" android:text="" />
+</LinearLayout>

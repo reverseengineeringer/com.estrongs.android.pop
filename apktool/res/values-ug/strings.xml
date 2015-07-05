@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">تاللاش</string>
+    <string name="app_name">ھۆججەت باشقۇرغۇچ</string>
+    <string name="app_media_player">فىلىم قويغۇچ</string>
+    <string name="app_note_editor">يېزىق تەھرىرلىگۈچ</string>
+    <string name="app_image_browser">رەسىم كۆرگۈچ</string>
+    <string name="app_zip_viewer">پىرېس كۆرگۈچ</string>
+    <string name="app_downloader">چۈشۈرگۈچ</string>
+    <string name="select_device_to_share">يوللايدىغان ئۈسكۈنىنى تاللاڭ</string>
+    <string name="es_share_name_activity">بەھرىلەش</string>
+    <string name="save_to_es">ES غا ساقلاش</string>
+</resources>

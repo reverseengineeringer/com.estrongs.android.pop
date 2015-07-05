@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/openapp_item_layout" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center_vertical" android:id="@id/hidelist_item_icon" android:focusable="false" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/fex" android:scaleType="fitCenter" />
+    <LinearLayout android:orientation="vertical" android:id="@id/histlist_item_name_path" android:focusable="false" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:minHeight="60.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/dp_16" android:textStyle="bold" android:textColor="@color/main_content_text" android:gravity="bottom|center|left" android:layout_gravity="center" android:id="@id/hidelist_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:scrollHorizontally="false" android:singleLine="true" />
+        <TextView android:textSize="@dimen/dp_14" android:textColor="@color/main_content_detail_text" android:gravity="center|left|top" android:layout_gravity="center" android:id="@id/hidelist_item_path" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="false" android:singleLine="false" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:focusable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <Button android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:layout_gravity="center" android:id="@id/hidelist_delete" android:background="@drawable/content_button_bg_selector" android:focusable="true" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_30" android:text="@string/action_restore" />
+        <Button android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:layout_gravity="center" android:id="@id/hidelist_open" android:background="@drawable/content_button_bg_selector" android:focusable="true" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_30" android:layout_marginLeft="4.0dip" android:text="@string/action_open" />
+    </LinearLayout>
+</LinearLayout>

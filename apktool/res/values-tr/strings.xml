@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Seç</string>
+    <string name="app_name">ES Dosya Yöneticisi</string>
+    <string name="app_media_player">ES Ortam Yürütücüsü</string>
+    <string name="app_note_editor">ES Metin Düzenleyici</string>
+    <string name="app_image_browser">ES Resim Gösterici</string>
+    <string name="app_zip_viewer">ES Zip Görüntüleyici</string>
+    <string name="app_downloader">ES İndirici</string>
+    <string name="select_device_to_share">Göndermek için bir cihaz seçin</string>
+    <string name="es_share_name_activity">Yerel ağ ile gönder</string>
+    <string name="save_to_es">ES Kaydet...</string>
+</resources>

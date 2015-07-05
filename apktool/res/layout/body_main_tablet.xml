@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.pop.esclasses.ESDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <include android:id="@id/left_body" layout="@layout/navi_page1" />
+        <include android:id="@id/right_body" layout="@layout/port_body_main" />
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="end" android:id="@id/end_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.estrongs.android.pop.esclasses.ESDrawerLayout>

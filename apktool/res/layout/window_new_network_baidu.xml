@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:indeterminateDrawable="@drawable/progress_drawable" android:layout_centerInParent="true" android:layout_centerHorizontal="false" android:layout_centerVertical="false" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="10.0dip" android:stretchColumns="1" android:shrinkColumns="1">
+                <TableRow>
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_email" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_account" android:singleLine="true" />
+                    <EditText android:textColor="@color/popupbox_content_text" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/editInputText" />
+                </TableRow>
+                <TableRow android:layout_marginTop="12.0dip">
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_pw" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_password" android:singleLine="true" />
+                    <EditText android:textColor="@color/popupbox_content_text" android:id="@id/password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="textPassword" style="@style/editInputText" />
+                </TableRow>
+                <TableRow android:id="@id/verifycode_layout" android:visibility="gone" android:layout_marginTop="12.0dip">
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_verifycode" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/verifycode" android:singleLine="true" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <FrameLayout android:id="@id/verifycode_lay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true">
+                            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/verifycodeImg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/verify_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+                            </RelativeLayout>
+                        </FrameLayout>
+                        <EditText android:textColor="@color/popupbox_content_text" android:id="@id/verifycode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:maxLength="10" android:layout_toLeftOf="@id/verifycode_lay" style="@style/editInputText" />
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:id="@id/row_display" android:layout_marginTop="12.0dip">
+                    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_display" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_location_display" android:singleLine="true" />
+                    <EditText android:textColor="@color/popupbox_content_text" android:id="@id/edittext_displayas_new_network" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/editInputText" />
+                </TableRow>
+            </TableLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="14.0dip">
+                <View android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/blue_link" android:id="@id/phone_tip" android:background="@drawable/background_content_grid" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_login_forget" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="16.0dip">
+                <View android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pcs_reg_account" android:background="@drawable/background_content_grid" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/pcs_reg_account1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_reg_account" />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/pcs_reg_account2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/blue_link" android:id="@id/pcs_reg_account3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_reg_account1" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+            <LinearLayout android:orientation="vertical" android:id="@id/third_login_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="2.0dip">
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/third_part" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pcs_login_third_part" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/renren" android:background="@drawable/background_content_grid" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:src="@drawable/pcs_login_renren" android:scaleType="centerInside" android:layout_weight="1.0" />
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/weibo" android:background="@drawable/background_content_grid" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:src="@drawable/pcs_login_weibo" android:scaleType="centerInside" android:layout_weight="1.0" />
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/qq" android:background="@drawable/background_content_grid" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:src="@drawable/pcs_login_qq" android:scaleType="centerInside" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

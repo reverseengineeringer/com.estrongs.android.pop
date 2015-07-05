@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">தேர்ந்தெடு</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_note_editor">ES Note Editor</string>
+    <string name="app_image_browser">ES Image Browser</string>
+    <string name="app_zip_viewer">ES Zip Viewer</string>
+    <string name="app_downloader">ES Downloader</string>
+    <string name="select_device_to_share">அனுப்பவேண்டிய சாதனத்தை தேர்ந்தெடு</string>
+    <string name="es_share_name_activity">லேன் மூலம் அனுப்ப</string>
+    <string name="save_to_es">ES சேமிக்க</string>
+</resources>

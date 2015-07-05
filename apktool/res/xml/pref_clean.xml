@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_clean_history_exit" android:key="app_clean_history_exit" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/clear_cache_on_exit" android:key="auto_clear" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/preference_cache_title" android:key="cache" android:summary="@string/preference_cache_summary" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/preference_clean_prefer_title" android:key="clean_prefer" android:summary="@string/preference_clean_prefer_summary" />
+</PreferenceScreen>

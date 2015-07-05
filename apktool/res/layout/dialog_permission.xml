@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow android:gravity="center_vertical" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:id="@id/property_read_title" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/permission_read" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:id="@id/property_write_title" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/permission_write" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:id="@id/property_execute_text" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/permission_execute" android:singleLine="true" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:gravity="center_vertical" android:id="@id/permission_owner_row" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/promission_owner_title" android:text="@string/owner_dialog_title" android:singleLine="true" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_readable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_writable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_executable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:gravity="center_vertical" android:id="@id/permission_group_row" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/promission_owner_title" android:text="@string/permission_group" android:singleLine="true" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_readable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_writable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_executable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:gravity="center_vertical" android:id="@id/permission_other_row" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/promission_other_title" android:text="@string/permission_other" android:singleLine="true" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_readable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_writable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_executable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+            </TableRow>
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/divider" android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+            <TableRow android:gravity="center_vertical" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/promission_uid_title" android:text="@string/permission_dialog_uid" android:singleLine="true" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_setuid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="center" android:id="@id/promission_gid_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/permission_dialog_gid" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_setgid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow android:gravity="center_vertical" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/promission_stiction_title" android:text="@string/permission_dialog_stiction" android:singleLine="true" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <CheckBox android:id="@id/checkbox_setstk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/popupbox_checkbox_drawable" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

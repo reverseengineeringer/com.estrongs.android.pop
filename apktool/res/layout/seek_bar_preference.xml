@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@android:id/widget_frame" android:paddingLeft="24.0dip" android:paddingTop="14.0dip" android:paddingRight="20.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_16" android:typeface="sans" android:textStyle="normal" android:textColor="#ffffffff" android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/dp_12" android:id="@android:id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/title" android:layout_alignParentLeft="true" />
+    <TextView android:id="@id/seekBarPrefUnitsRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@android:id/title" android:layout_alignParentRight="true" />
+    <TextView android:gravity="right" android:id="@id/seekBarPrefValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/seekBarPrefUnitsRight" android:layout_below="@android:id/title" />
+    <TextView android:id="@id/seekBarPrefUnitsLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/seekBarPrefValue" android:layout_below="@android:id/title" />
+    <LinearLayout android:id="@id/seekBarPrefBarContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/summary" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

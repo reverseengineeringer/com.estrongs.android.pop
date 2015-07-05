@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/notice_message" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:text="@string/traffic_alert_message" />
+        <CheckBox android:textColor="@color/black" android:id="@id/not_show_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/not_show_alert_again" />
+    </LinearLayout>
+</ScrollView>

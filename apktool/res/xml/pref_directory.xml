@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.ui.preference.DirChoosePreference android:persistent="false" android:layout="@layout/tablet_preference" android:singleLine="true" android:title="@string/preference_root_dir" android:key="root_dir" android:widgetLayout="@layout/custom_preference_widget_dialog" android:dialogTitle="@string/preference_root_dir" />
+    <com.estrongs.android.ui.preference.DirChoosePreference android:persistent="false" android:layout="@layout/tablet_preference" android:singleLine="true" android:title="@string/preference_bt_dir" android:key="bt_dir" android:widgetLayout="@layout/custom_preference_widget_dialog" android:dialogTitle="@string/preference_bt_dir" />
+    <com.estrongs.android.ui.preference.DirChoosePreference android:persistent="false" android:layout="@layout/tablet_preference" android:singleLine="true" android:title="@string/preference_download_dir" android:key="download_dir" android:widgetLayout="@layout/custom_preference_widget_dialog" android:dialogTitle="@string/preference_download_dir" />
+</PreferenceScreen>

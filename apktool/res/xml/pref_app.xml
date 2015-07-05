@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="app_pref_app"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_auto_backup_text" android:key="auto_app_backup" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" android:shouldDisableView="true" />
+    <com.estrongs.android.ui.preference.DirChoosePreference android:persistent="false" android:layout="@layout/tablet_preference" android:singleLine="true" android:title="@string/preference_app_backup_dir" android:key="app_backup_dir" android:widgetLayout="@layout/custom_preference_widget_dialog" android:dialogTitle="@string/preference_app_backup_dir" />
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/clean_associated_folders_setting_text" android:key="clear_associate_folders_after_uninstall" android:summary="@string/clean_associated_folders_setting_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" android:shouldDisableView="true" />
+    <PreferenceCategory android:title="@string/app_update" android:key="app_check_update">
+        <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/app_update_setttings_title" android:key="auto_check_list" android:summary="@string/app_update_setttings_title_summary">
+            <intent android:action="com.estrongs.action.APP_CHECK_UPDATE_LIST" />
+        </Preference>
+        <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_ignore_inconsistent_sign_app" android:key="ignore_inconsistent_sign_app" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" android:shouldDisableView="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_root_enhancement" android:key="app_root_enhancement">
+        <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_backup_app_cache_text" android:key="backup_app_cache" android:summary="@string/preference_backup_app_cache_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" android:shouldDisableView="true" />
+        <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_auto_install_text" android:key="root_auto_install" android:summary="@string/preference_auto_install_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" android:shouldDisableView="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

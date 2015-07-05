@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">انتخاب</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_media_player">ES مدیا پلیر</string>
+    <string name="app_note_editor">ES ویرایشگر</string>
+    <string name="app_image_browser">ES مرورگر تصویر</string>
+    <string name="app_zip_viewer">ES مرورگرفایل زیپ</string>
+    <string name="app_downloader">ES دانلودر</string>
+    <string name="select_device_to_share">انتخاب یک دستگاه برای ارسال</string>
+    <string name="es_share_name_activity">ارسال توسط LAN</string>
+    <string name="save_to_es">ES ذخیره در</string>
+</resources>

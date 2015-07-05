@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/common_dialog_item_icon" android:visibility="gone" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_marginRight="8.0dip" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/common_dialog_item_text" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="false" android:layout_weight="1.0" android:textDirection="ltr" />
+    <RadioButton android:id="@id/common_dialog_item_radio" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/radio_button_drawable" />
+</LinearLayout>

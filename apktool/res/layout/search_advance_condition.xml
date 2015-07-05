@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:id="@id/search_field_size" android:layout_marginLeft="15.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="6.0dip">
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:gravity="center|right" android:id="@id/search_cond_size_scope_selection_title_id" android:padding="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/search_size_scope_selection_title" />
+        <LinearLayout android:gravity="center|left" android:id="@id/size_container" android:background="@drawable/popupbox_select_bg" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_32" android:layout_weight="1.0">
+            <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_button_text" android:ellipsize="end" android:gravity="center|left" android:id="@id/search_size" android:background="@drawable/background_globle_buttons" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+        </LinearLayout>
+    </TableRow>
+    <TableRow android:id="@id/search_field_date" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="30.0dip">
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:gravity="center|right" android:id="@id/search_cond_date_scope_selection_title_id" android:padding="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/search_date_scope_selection_title" />
+        <LinearLayout android:gravity="center|left" android:id="@id/date_container" android:background="@drawable/popupbox_select_bg" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_32" android:layout_weight="1.0">
+            <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_button_text" android:ellipsize="end" android:gravity="center|left" android:id="@id/search_date" android:background="@drawable/background_globle_buttons" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>

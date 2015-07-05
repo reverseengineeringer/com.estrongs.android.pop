@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/format_picture_broken" />
+    <TextView android:id="@id/msg_failed_to_load_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_failed_to_load_img" />
+</LinearLayout>

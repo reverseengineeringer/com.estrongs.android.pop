@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/icon" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

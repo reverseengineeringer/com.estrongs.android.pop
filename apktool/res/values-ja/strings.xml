@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">選択</string>
+    <string name="app_name">ES ファイルエクスプローラ</string>
+    <string name="app_media_player">ES メディアプレイヤー</string>
+    <string name="app_note_editor">ES テキストエディタ</string>
+    <string name="app_image_browser">ES 画像ブラウザ</string>
+    <string name="app_zip_viewer">ES Zipビューア</string>
+    <string name="app_downloader">ESダウンローダ</string>
+    <string name="select_device_to_share">送信する端末を選んでください</string>
+    <string name="es_share_name_activity">LANより送信</string>
+    <string name="save_to_es">ES保存</string>
+</resources>

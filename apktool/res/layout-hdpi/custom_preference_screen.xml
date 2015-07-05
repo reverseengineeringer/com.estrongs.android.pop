@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="@drawable/preference_background" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="@dimen/preference_icon_size" android:layout_height="@dimen/preference_icon_size" android:layout_marginLeft="20.0dip" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_text_preference" android:ellipsize="marquee" android:id="@android:id/title" android:paddingLeft="4.0dip" android:paddingRight="20.0dip" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+</LinearLayout>

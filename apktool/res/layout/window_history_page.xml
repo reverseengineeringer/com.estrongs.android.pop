@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/window_history_bottom_button" android:background="@drawable/popupbox_button_cancel_single_selector" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/dp_48" android:layout_alignParentBottom="true">
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/window_history_bottom_icon" android:layout_width="@dimen/dp_24" android:layout_height="@dimen/dp_24" android:src="@drawable/history_clear" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/black" android:id="@id/window_history_bottom_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="@string/action_clear" />
+    </LinearLayout>
+    <ListView android:id="@id/listview_history" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/popupbox_listview_selector" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" android:layout_above="@id/window_history_bottom_button" />
+</RelativeLayout>

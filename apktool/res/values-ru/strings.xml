@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Выбор</string>
+    <string name="app_name">ES Проводник</string>
+    <string name="app_media_player">ES Медиаплеер</string>
+    <string name="app_note_editor">ES Редактор</string>
+    <string name="app_image_browser">Просмотр изображения</string>
+    <string name="app_zip_viewer">ES Архиватор</string>
+    <string name="app_downloader">ES Загрузчик</string>
+    <string name="select_device_to_share">Выбрать устройство для отправки</string>
+    <string name="es_share_name_activity">Доступ через LAN</string>
+    <string name="save_to_es">ES Сохранить в</string>
+</resources>

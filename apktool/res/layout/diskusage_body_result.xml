@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview_diskusage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/blank" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/infobar_top" android:background="@drawable/disk_content_statistics_bg" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16">
+        <View android:layout_width="@dimen/dp_45" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_title_text" android:id="@id/info1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/diskusage_column_size" />
+            <View android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_title_text" android:gravity="center" android:id="@id/info2" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/diskusage_column_file_sd" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_title_text" android:gravity="right" android:id="@id/info3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/diskusage_column_num" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/infobar_bottom" android:background="@drawable/disk_content_statistics_bg" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_totalsize_text" android:id="@id/label_total" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/diskusage_total_size" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_totalsize_text" android:id="@id/diskusage_total_size" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <View android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_usedsize_text" android:id="@id/label_used" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/diskusage_used" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_usedsize_text" android:id="@id/diskusage_used_size" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <View android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_availsize_text" android:id="@id/label_avail" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/diskusage_avail" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_availsize_text" android:id="@id/diskusage_avail_size" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

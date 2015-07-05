@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/popupbox_listview_selector" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" />
+    <View android:id="@id/line" android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pcs_reg_account" android:background="@drawable/background_content_grid" android:focusable="true" android:layout_width="wrap_content" android:layout_height="@dimen/dp_48" android:layout_marginRight="18.0dip">
+        <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/pcs_reg_account1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_reg_account" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="#80444444" android:id="@id/pcs_reg_account2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/blue_link" android:id="@id/pcs_reg_account3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pcs_reg_account1" />
+    </LinearLayout>
+</LinearLayout>

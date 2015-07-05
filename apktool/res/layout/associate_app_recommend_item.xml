@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/dp_80"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView1" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="10.0dip" android:src="@drawable/app_pic_net_instagram" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/popupbox_radio_button_unchecked" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="TextView" android:layout_toLeftOf="@id/imageView2" android:layout_toRightOf="@id/imageView1" android:layout_alignTop="@id/imageView1" />
+    <TextView android:textColor="@color/popupbox_content_text_disable" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:layout_alignLeft="@id/textView1" android:layout_alignRight="@id/textView1" android:layout_alignBottom="@id/imageView1" />
+</RelativeLayout>

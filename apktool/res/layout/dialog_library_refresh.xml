@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/item1" android:background="@drawable/popupbox_listview_selector" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip">
+        <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/refresh_content" android:singleLine="false" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/item2" android:background="@drawable/popupbox_listview_selector" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip">
+        <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/refresh_system_library" android:singleLine="true" />
+        <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text_disable" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/refresh_library_warning" android:singleLine="false" />
+    </LinearLayout>
+</LinearLayout>

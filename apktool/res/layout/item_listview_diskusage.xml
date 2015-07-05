@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.ui.view.ESLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_51"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center_vertical" android:id="@id/icon_item_listview_diskusage" android:paddingLeft="8.0dip" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" />
+    <FrameLayout android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+        <com.estrongs.android.widget.UsageImageView android:id="@id/usage_item_listview_diskusage" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/white" android:id="@id/label_item_listview_diskusage" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <LinearLayout android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/grey_text_diskusage_item_size" android:gravity="left" android:id="@id/size_item_listview_diskusage" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/rate_item_listview_diskusage" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/white" android:gravity="right" android:id="@id/num_item_listview_diskusage" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:padding="0.0dip" android:focusable="false" android:visibility="invisible" android:clickable="false" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_22" android:layout_marginRight="0.0dip" android:button="@drawable/checkbox_grid_file_drawable" android:layout_alignParentRight="true" />
+</com.estrongs.android.ui.view.ESLinearLayout>

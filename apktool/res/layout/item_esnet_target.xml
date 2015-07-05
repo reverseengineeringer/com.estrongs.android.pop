@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="10.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/send_phone" />
+    <RelativeLayout android:gravity="center_vertical" android:paddingLeft="10.0dip" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/frame_choose" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/dp_18" android:textColor="@color/white" android:id="@id/choose_message" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/choose_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_grid_file_drawable" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/frame_waiting" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingRight="20.0dip" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dp_18" android:textColor="@color/white" android:ellipsize="end" android:id="@id/waiting_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/darkgrey" android:id="@id/waiting_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            </LinearLayout>
+            <ProgressBar android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_marginRight="12.0dip" style="@style/ProgressBar" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

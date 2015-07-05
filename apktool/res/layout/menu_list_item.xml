@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/menu_list_item" android:background="@drawable/background_menu_item" android:focusable="true" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="@dimen/dp_42" android:minWidth="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/item_icon" android:layout_width="@dimen/toolbar_icon_size" android:layout_height="@dimen/toolbar_icon_size" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:scaleType="centerInside" />
+    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/toolbar_edit_more_list_text" android:gravity="center_vertical" android:id="@id/item_text" android:layout_width="wrap_content" android:layout_height="@dimen/dp_42" android:layout_marginRight="6.0dip" android:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:icon="@drawable/setting_icon_search" android:layout="@layout/tablet_preference" android:title="@string/preference_search_engine_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.ui.preference.CustomListPreference android:persistent="true" android:entries="@array/search_engine_entries" android:layout="@layout/tablet_preference" android:title="@string/preference_search_engine_title" android:key="search_engine_default" android:defaultValue="auto" android:dialogTitle="@string/preference_search_engine_title" android:entryValues="@array/search_engine_values" />
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_show_search_engine_title" android:key="show_search_engine" android:summary="@string/preference_show_search_engine_title" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+</PreferenceScreen>

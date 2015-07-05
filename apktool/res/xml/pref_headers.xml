@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_file_text" android:key="file_preference">
+        <PreferenceScreen android:icon="@drawable/setting_icon_display" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_display_setting_text" android:key="preference_display_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.DisplayPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_cleanup" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_cleanup_setting_text" android:key="preference_cleanup_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.CleanPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_directory" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_directory_setting_text" android:key="preference_directory_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.DirectoryPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_search" android:layout="@layout/custom_preference_screen" android:title="@string/preference_search_engine_title" android:key="preference_search_engine_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.SearchEnginePreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_document" android:layout="@layout/custom_preference_screen" android:title="@string/preference_document_title" android:key="preference_document_ext_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.DocumentPreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_security" android:key="setting_security">
+        <PreferenceScreen android:icon="@drawable/setting_icon_password" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_security_setting_text" android:key="preference_net_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.PasswordPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_backup" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_backup_settings_text" android:key="preference_backup_settings_category" android:fragment="com.estrongs.android.ui.preference.fragments.BackupPreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_tools" android:key="preference_tools_settings">
+        <PreferenceScreen android:icon="@drawable/setting_icon_appmanager" android:layout="@layout/custom_preference_screen" android:title="@string/category_apk" android:key="appmanager_preference" android:fragment="com.estrongs.android.ui.preference.fragments.AppPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_download" android:layout="@layout/custom_preference_screen" android:title="@string/app_download_manager" android:key="downloader_settings" android:fragment="com.estrongs.android.ui.preference.fragments.DownloadPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_window" android:layout="@layout/custom_preference_screen" android:title="@string/preference_window_settings" android:key="window_settings" android:fragment="com.estrongs.android.ui.preference.fragments.WindowPreferenceFragment" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_recycle" android:layout="@layout/custom_preference_screen" android:title="@string/recycle_title" android:key="recycle_settings" android:fragment="com.estrongs.android.ui.preference.fragments.RecyclePreferenceFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_update" android:key="preference_upgrade_settings_text_category">
+        <Preference android:icon="@drawable/setting_icon_rate" android:layout="@layout/custom_preference_screen" android:title="@string/rate" android:key="preference_rate" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_update" android:layout="@layout/custom_preference_screen" android:title="@string/preference_upgrade_settings_text" android:key="update_preference" android:summary="@string/preference_update_summary" android:fragment="com.estrongs.android.ui.preference.fragments.UpgradePreferenceFragment" />
+        <Preference android:icon="@drawable/setting_icon_privacy" android:layout="@layout/custom_preference_screen" android:title="@string/privacy_statement" android:key="preference_privacy" />
+        <Preference android:icon="@drawable/setting_icon_help" android:layout="@layout/custom_preference_screen" android:title="@string/location_help" android:key="preference_help" />
+        <PreferenceScreen android:icon="@drawable/setting_icon_about" android:layout="@layout/custom_preference_screen" android:title="@string/about" android:key="preference_about" android:fragment="com.estrongs.android.ui.preference.fragments.AboutPreferenceFragment" />
+    </PreferenceCategory>
+</PreferenceScreen>

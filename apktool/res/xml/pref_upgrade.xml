@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:enabled="true" android:layout="@layout/tablet_preference" android:title="@string/preference_upgrade_auto_check_title" android:key="upgrade_auto_check" android:summary="@string/preference_upgrade_auto_check_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/preference_upgrade_manual_check_title" android:key="upgrade_check" android:summary="@string/preference_upgrade_manual_check_summary" />
+    <CheckBoxPreference android:persistent="true" android:enabled="true" android:layout="@layout/tablet_preference" android:key="send_statistics" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+</PreferenceScreen>

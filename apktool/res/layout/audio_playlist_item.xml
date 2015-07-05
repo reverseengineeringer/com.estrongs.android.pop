@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/drag_list_item_image" android:layout_width="@dimen/dp_50" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <TextView android:textSize="@dimen/dp_14" android:gravity="center" android:id="@id/pos" android:layout_width="fill_parent" android:layout_height="@dimen/dp_34" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/dp_26" android:src="@drawable/app_audio_list_order" android:scaleType="center" />
+    </LinearLayout>
+    <RelativeLayout android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/drag_list_item_image">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="20.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_34">
+                <TextView android:textSize="@dimen/dp_14" android:gravity="center_vertical" android:id="@id/title" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_14" android:gravity="center_vertical" android:id="@id/size" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_26">
+                <TextView android:textSize="@dimen/dp_12" android:gravity="center_vertical" android:id="@id/description" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_26" android:layout_weight="1.0" />
+                <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center_vertical" android:id="@id/audio_song_play_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" />
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/loading_bar" android:visibility="gone" android:layout_width="@dimen/dp_16" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" style="@style/ProgressBar" />
+            </LinearLayout>
+        </LinearLayout>
+        <CheckBox android:enabled="false" android:id="@id/checkbox" android:focusable="false" android:clickable="false" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_22" android:layout_marginTop="18.0dip" android:layout_marginRight="0.0dip" android:button="@drawable/checkbox_grid_file_drawable" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

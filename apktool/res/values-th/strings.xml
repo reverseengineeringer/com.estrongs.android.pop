@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">เลือก</string>
+    <string name="app_name">ES ไฟล์ เอ็กซ์พอเลอร์</string>
+    <string name="app_media_player">ES มีเดียเพลย์เยอร์</string>
+    <string name="app_note_editor">ES แก้ไขบันทึก</string>
+    <string name="app_image_browser">ES เบราว์เซอร์ภาพ</string>
+    <string name="app_zip_viewer">ES Zip วิลเวอร์</string>
+    <string name="app_downloader">ES ดาวน์โหลด</string>
+    <string name="select_device_to_share">กรุณาเลือกอุปกรณ์ที่จะส่ง</string>
+    <string name="es_share_name_activity">ส่งโดย LAN</string>
+    <string name="save_to_es">ES บันทึกไปที่</string>
+</resources>

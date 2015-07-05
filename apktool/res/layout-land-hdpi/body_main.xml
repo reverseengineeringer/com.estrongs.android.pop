@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.pop.esclasses.ESDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <include android:id="@id/toolbar_container_top" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent" layout="@layout/land_tools_top_file" />
+        <RelativeLayout android:id="@id/window_rect" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/title_bar" android:background="@drawable/main_titlebar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="center" android:id="@id/textbar_top" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_17" android:layout_weight="3.0">
+                        <LinearLayout android:gravity="center" android:id="@id/container_indicators" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/theme_content_sp" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="5.0dip" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="2.0">
+                        <com.estrongs.android.pop.esclasses.ESImageView android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" android:src="@drawable/landscape_history_icon" />
+                        <Button android:textSize="@dimen/dp_12" android:textColor="@color/main_addressbar_text" android:ellipsize="start" android:gravity="center|left" android:id="@id/tool_history" android:background="@drawable/blank" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+                        <ProgressBar android:id="@id/ind_loading" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:layout_marginRight="5.0dip" style="@style/ProgressBar" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_titlebar_text" android:gravity="center" android:id="@id/selected_info" android:background="@drawable/main_titlebar_bg" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/app_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_below="@id/title_bar" />
+            <com.estrongs.android.ui.drag.DragLayer android:id="@id/container_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_bar" />
+            <include android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dp_39" layout="@layout/search_bar" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_left" android:background="@drawable/shadow_tools_left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_right" android:background="@drawable/shadow_tools_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/full_screen_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_display" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/container_tools_bottom" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="center" android:id="@id/switcher_tools_bottom" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="start" android:id="@id/start_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="end" android:id="@id/end_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.estrongs.android.pop.esclasses.ESDrawerLayout>

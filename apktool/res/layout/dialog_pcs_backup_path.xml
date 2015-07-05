@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="18.0dip" android:paddingTop="18.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pcs_backup_set_path" />
+    <EditText android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" style="@style/editInputText" />
+    <CheckBox android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/setAsDefault" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:checked="true" android:button="@drawable/popupbox_checkbox_drawable" android:text="@string/set_as_default" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/histlist_item_name_path" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textColor="@color/popupbox_content_text" android:id="@id/pathName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="path" android:scrollHorizontally="true" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioGroup android:orientation="horizontal" android:id="@id/rw_type" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/readOnly" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:checked="true" android:button="@drawable/radio_button_drawable" />
+            <RadioButton android:id="@id/readWrite" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:button="@drawable/radio_button_drawable" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

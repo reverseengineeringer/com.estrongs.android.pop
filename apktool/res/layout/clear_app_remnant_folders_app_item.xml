@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_56"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView1" android:layout_width="@dimen/dp_32" android:layout_height="@dimen/dp_32" android:layout_marginLeft="14.0dip" android:src="@drawable/format_apk" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/black" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:text="TextView" android:singleLine="true" android:layout_toLeftOf="@id/indicator" android:layout_toRightOf="@id/imageView1" android:layout_centerVertical="true" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/imageView2" android:background="@color/popupbox_input_hint_disable_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" android:layout_alignParentBottom="true" />
+</RelativeLayout>

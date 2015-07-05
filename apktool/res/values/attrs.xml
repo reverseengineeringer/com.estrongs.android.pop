@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="handle" format="reference" />
+    <attr name="content" format="reference" />
+    <attr name="orientation" format="integer" />
+    <attr name="bottomOffset" format="dimension" />
+    <attr name="topOffset" format="dimension" />
+    <attr name="allowSingleTap" format="boolean" />
+    <attr name="animateOnClick" format="boolean" />
+    <attr name="direction">
+        <enum name="from_down_to_up" value="3" />
+        <enum name="from_left_to_right" value="0" />
+        <enum name="from_right_to_left" value="1" />
+        <enum name="from_up_to_down" value="2" />
+    </attr>
+    <attr name="thumb" format="reference" />
+    <attr name="track" format="reference" />
+    <attr name="textOn" format="string" />
+    <attr name="textOff" format="string" />
+    <attr name="thumbTextPadding" format="dimension" />
+    <attr name="switchTextAppearance" format="reference" />
+    <attr name="switchMinWidth" format="dimension" />
+    <attr name="switchPadding" format="dimension" />
+    <attr name="state_checked" format="boolean" />
+    <attr name="switchStyle" format="reference" />
+    <attr name="switchPreferenceStyle" format="reference" />
+    <attr name="summaryOn" format="string" />
+    <attr name="summaryOff" format="string" />
+    <attr name="switchTextOn" format="string" />
+    <attr name="switchTextOff" format="string" />
+    <attr name="disableDependentsState" format="boolean" />
+    <attr name="sdcardOnly" format="boolean" />
+    <attr name="ptrRefreshableViewBackground" format="reference|color" />
+    <attr name="ptrHeaderBackground" format="reference|color" />
+    <attr name="ptrHeaderTextColor" format="reference|color" />
+    <attr name="ptrHeaderSubTextColor" format="reference|color" />
+    <attr name="ptrMode">
+        <flag name="both" value="0x00000003" />
+        <flag name="disabled" value="0x00000000" />
+        <flag name="manualOnly" value="0x00000004" />
+        <flag name="pullDownFromTop" value="0x00000001" />
+        <flag name="pullFromEnd" value="0x00000002" />
+        <flag name="pullFromStart" value="0x00000001" />
+        <flag name="pullUpFromBottom" value="0x00000002" />
+    </attr>
+    <attr name="ptrShowIndicator" format="reference|boolean" />
+    <attr name="ptrDrawable" format="reference" />
+    <attr name="ptrDrawableStart" format="reference" />
+    <attr name="ptrDrawableEnd" format="reference" />
+    <attr name="ptrOverScroll" format="reference|boolean" />
+    <attr name="ptrHeaderTextAppearance" format="reference" />
+    <attr name="ptrSubHeaderTextAppearance" format="reference" />
+    <attr name="ptrAnimationStyle">
+        <flag name="flip" value="0x00000001" />
+        <flag name="rotate" value="0x00000000" />
+    </attr>
+    <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+    <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+    <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+    <attr name="ptrAdapterViewBackground" format="reference|color" />
+    <attr name="ptrDrawableTop" format="reference" />
+    <attr name="ptrDrawableBottom" format="reference" />
+</resources>

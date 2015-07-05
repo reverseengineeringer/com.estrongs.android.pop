@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">选择</string>
+    <string name="app_name">ES文件浏览器</string>
+    <string name="app_media_player">ES媒体播放器</string>
+    <string name="app_note_editor">ES文本阅读器</string>
+    <string name="app_image_browser">ES图片浏览器</string>
+    <string name="app_zip_viewer">ES压缩查看器</string>
+    <string name="app_downloader">ES下载器</string>
+    <string name="select_device_to_share">选择需要发送的设备</string>
+    <string name="es_share_name_activity">发送到ES网络</string>
+    <string name="save_to_es">保存到ES</string>
+</resources>

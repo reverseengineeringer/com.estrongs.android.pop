@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:icon="@drawable/setting_icon_about" android:layout="@layout/tablet_preference" android:title="@string/about" android:key="preference_about" android:summary="@string/preference_update_summary"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/version" android:key="preference_version" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference_offical_website" android:title="@string/official_website" android:key="preference_website" android:summary="@string/copyright" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/about_more" android:key="preference_more_app" android:summary="@string/about_more" />
+    <Preference android:persistent="false" android:layout="@layout/custom_preference_thank_list" android:title="@string/special_thanks_to_translators" android:key="preference_special_thanks_to_translators" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/about_feedback" android:key="preference_feedback" android:summary="@string/send_email_to_us" />
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_64" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_64" android:layout_weight="1.0">
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/icon" android:background="@drawable/esnet_join" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dp_20" android:textColor="#ff000000" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/message" android:paddingLeft="6.0dip" android:paddingRight="18.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/dp_28" android:scrollHorizontally="true" android:singleLine="true" android:freezesText="true" android:marqueeRepeatLimit="marquee_forever" />
+            <TextView android:textSize="@dimen/dp_14" android:id="@id/submessage" android:paddingLeft="6.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip">
+        <com.estrongs.android.pop.esclasses.ESImageView android:gravity="center_vertical" android:id="@id/image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

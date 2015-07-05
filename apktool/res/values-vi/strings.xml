@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Chọn</string>
+    <string name="app_name">ES Duyệt Tập Tin</string>
+    <string name="app_media_player">ES Phát Nhạc</string>
+    <string name="app_note_editor">ES Soạn Thảo</string>
+    <string name="app_image_browser">ES Duyệt Ảnh</string>
+    <string name="app_zip_viewer">ES Xem Nén</string>
+    <string name="app_downloader">ES Tải</string>
+    <string name="select_device_to_share">Chọn một thiết bị để gửi</string>
+    <string name="es_share_name_activity">Gửi bằng LAN</string>
+    <string name="save_to_es">ES Lưu vào</string>
+</resources>

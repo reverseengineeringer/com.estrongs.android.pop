@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1" android:shrinkColumns="1">
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/label_domain" android:layout_marginRight="6.0dip" android:text="@string/network_domain" />
+            <EditText android:textColor="@color/popupbox_content_text" android:id="@id/network_domain" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:hint="@string/network_domain_hint_text" android:scrollHorizontally="true" android:layout_weight="1.0" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/label_location" android:layout_marginRight="6.0dip" android:text="@string/location_server" />
+            <EditText android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/location" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:hint="@string/network_location_hint_text" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView />
+            <LinearLayout android:orientation="horizontal">
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_button_text_2" android:id="@id/label_example" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_location_example" />
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_button_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_button_text_2" android:id="@id/example" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/network_location_example_text" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_user" android:layout_marginRight="6.0dip" android:text="@string/input_username" />
+            <EditText android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/label_username" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_password" android:layout_marginRight="6.0dip" android:text="@string/input_password" />
+            <EditText android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/password" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPassword" style="@style/editInputText" />
+        </TableRow>
+        <TableRow android:paddingTop="2.0dip" android:paddingBottom="2.0dip">
+            <TextView />
+            <CheckBox android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/use_anonymous" android:layout_width="wrap_content" android:layout_height="@dimen/dp_24" android:text="@string/input_anonymous" style="@style/check_box_style" />
+        </TableRow>
+        <TableRow android:paddingTop="4.0dip" android:paddingBottom="4.0dip">
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/label_display" android:layout_marginRight="6.0dip" android:text="@string/network_location_display" />
+            <EditText android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:id="@id/display" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:hint="@string/network_location_display_hint_text" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" style="@style/editInputText" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

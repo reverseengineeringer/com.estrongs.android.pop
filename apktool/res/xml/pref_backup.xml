@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/action_backup" android:key="backupsettings" android:summary="@string/preference_backup_settings_text" />
+    <Preference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/action_restore" android:key="restoresettings" android:summary="@string/preference_setting_restore_summary" />
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_enable_remote_synchronizer_title" android:key="enableRemoteSynchronizer" android:summary="@string/preference_enable_remote_synchronizer_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+</PreferenceScreen>

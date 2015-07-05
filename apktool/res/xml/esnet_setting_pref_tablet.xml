@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/es_net_use_random_ap" android:key="random_ap" android:summary="@string/es_net_use_random_ap_description" android:widgetLayout="@layout/custom_preference_widget_radio" android:defaultValue="true" />
+    <CheckBoxPreference android:persistent="false" android:layout="@layout/tablet_preference" android:title="@string/es_net_use_customized_ap" android:key="customized_ap" android:summary="@string/es_net_use_customized_ap_description" android:widgetLayout="@layout/custom_preference_widget_radio" android:defaultValue="false" />
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="raw" name="ding">res/raw/ding</item>
+    <item type="raw" name="dingcover">res/raw/dingcover</item>
+    <item type="raw" name="estool_arm">res/raw/estool_arm</item>
+    <item type="raw" name="estool_arm_pie">res/raw/estool_arm_pie</item>
+    <item type="raw" name="estool_x86">res/raw/estool_x86</item>
+    <item type="raw" name="estool_x86_pie">res/raw/estool_x86_pie</item>
+    <item type="raw" name="netdisk_boxnet">res/raw/netdisk_boxnet</item>
+    <item type="raw" name="netdisk_dropbox">res/raw/netdisk_dropbox</item>
+    <item type="raw" name="netdisk_gdrive">res/raw/netdisk_gdrive</item>
+    <item type="raw" name="netdisk_kanbox">res/raw/netdisk_kanbox</item>
+    <item type="raw" name="netdisk_kuaipan">res/raw/netdisk_kuaipan</item>
+    <item type="raw" name="netdisk_mediafire">res/raw/netdisk_mediafire</item>
+    <item type="raw" name="netdisk_megacloud">res/raw/netdisk_megacloud</item>
+    <item type="raw" name="netdisk_s3">res/raw/netdisk_s3</item>
+    <item type="raw" name="netdisk_skydrv">res/raw/netdisk_skydrv</item>
+    <item type="raw" name="netdisk_sugarsync">res/raw/netdisk_sugarsync</item>
+    <item type="raw" name="netdisk_vdisk">res/raw/netdisk_vdisk</item>
+</resources>

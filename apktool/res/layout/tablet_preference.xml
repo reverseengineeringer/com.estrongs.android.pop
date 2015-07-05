@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="@drawable/tablet_preference_background" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="@dimen/dp_64" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="20.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_text_preference" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/color_preference_summary" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

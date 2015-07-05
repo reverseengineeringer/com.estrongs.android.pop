@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_mutiwindow" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/muti_window_bg_left" android:background="@drawable/search_category_bg_left" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/muti_window_bg_middle" android:background="@drawable/search_category_bg_middle" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/muti_window_bg_right" android:background="@drawable/search_category_bg_right" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/search_content_title_text" android:gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:text="@string/select_a_category" />
+            <LinearLayout android:id="@id/search_category" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <LinearLayout android:gravity="center" android:id="@id/search_category_all_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_all" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_all" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/search_category_image_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_image" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_image" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/search_category_music_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_music" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_music" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/search_category_video_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_video" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_video" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/search_category_apk_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_apk" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_apk" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/search_category_book_container" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_category_book" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/search_category_book" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/search_separator" android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/search_advanced" android:background="@drawable/background_globle_buttons" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/search_content_title_text" android:gravity="center_vertical" android:id="@id/title_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_bar_advanced" />
+                <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.estrongs.android.pop.esclasses.ESImageView android:gravity="center_vertical" android:id="@id/setting" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/toolbar_setting" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

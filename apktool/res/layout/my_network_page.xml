@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExpandableListView android:id="@id/my_network" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/transparent" android:groupIndicator="@drawable/blank" android:childIndicator="@drawable/blank" android:divider="@color/white"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

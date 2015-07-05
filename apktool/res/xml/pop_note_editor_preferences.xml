@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:persistent="true" android:entries="@array/line_terminator_entries" android:title="@string/line_terminator" android:key="lineTerminator" android:summary="@string/line_terminator_summary" android:defaultValue="0" android:entryValues="@array/line_terminator_values" />
+</PreferenceScreen>

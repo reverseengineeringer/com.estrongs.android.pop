@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/RelativeLayout01" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/toolbar_container_top" android:background="@drawable/toolbar_bg" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/tool_return" android:background="@drawable/background_globle_buttons" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54" android:src="@drawable/toolbar_close" android:contentDescription="@string/action_cancel_share" />
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/main_addressbar_text" android:gravity="center" android:id="@id/label" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/toolbar_bottom" android:background="@drawable/toolbar_bg" android:layout_width="@dimen/dp_54" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <LinearLayout android:gravity="center" android:id="@id/textbar_top" android:background="@drawable/main_titlebar_bg" android:layout_width="wrap_content" android:layout_height="@dimen/dp_18" android:layout_toLeftOf="@id/toolbar_bottom" android:layout_toRightOf="@id/toolbar_container_top">
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_titlebar_text" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/app_net_manager" android:layout_weight="1.0" />
+        <ProgressBar android:id="@id/progress" android:visibility="invisible" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:layout_marginRight="5.0dip" style="@style/ProgressBar" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/body_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/toolbar_bottom" android:layout_toRightOf="@id/toolbar_container_top" android:layout_below="@id/textbar_top" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/shadow_tools_left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignLeft="@id/body_container" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/shadow_tools_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignRight="@id/body_container" />
+</RelativeLayout>

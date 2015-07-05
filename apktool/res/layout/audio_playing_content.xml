@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/album_art" android:background="@drawable/app_audio_album_default_bg" android:padding="4.0dip" android:layout_width="@dimen/dp_270" android:layout_height="@dimen/dp_270" android:src="@drawable/app_audio_album_default_icon" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+        <View android:background="#80000000" android:layout_width="@dimen/dp_262" android:layout_height="@dimen/dp_40" android:layout_marginBottom="4.0dip" android:layout_alignBottom="@id/album_art" android:layout_centerHorizontal="true" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/btn_websearch" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/toolbar_icon_size" android:layout_height="@dimen/toolbar_icon_size" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/toolbar_websearch" android:scaleType="centerInside" android:layout_alignRight="@id/album_art" android:layout_alignBottom="@id/album_art" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container_progress" android:background="@color/translucent_background_80" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/white" android:id="@id/current_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:text="0:00" />
+        <SeekBar android:id="@id/progress" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:progressDrawable="@drawable/audio_seekbar_progress" android:thumb="@drawable/audio_seekbar_thumb_selector" android:thumbOffset="0.0dip" android:layout_weight="1.0" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/white" android:gravity="right" android:id="@id/total_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:text="0:00" />
+    </LinearLayout>
+</LinearLayout>

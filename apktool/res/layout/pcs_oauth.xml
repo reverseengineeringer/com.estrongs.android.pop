@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/auth_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:minHeight="200.0dip" android:layout_weight="1.0">
+        <com.estrongs.android.pop.esclasses.ESWebView android:id="@id/login_page" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="200.0dip" android:isScrollContainer="false" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center" android:id="@id/auth_page_load_progress" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_50" style="@style/ProgressBar" />
+            <TextView android:id="@id/auth_page_load_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/oauth_loading_page" />
+        </LinearLayout>
+        <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_text" android:layout_gravity="center|right|top" android:id="@id/instruction" android:background="@drawable/popupbox_button_action_selector" android:padding="4.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/dp_36" android:layout_margin="6.0dip" android:text="instruction" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/image" android:background="@color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pcs_instruction" android:scaleType="centerInside" />
+    </FrameLayout>
+</ScrollView>

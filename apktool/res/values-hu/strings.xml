@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Kiválasztás</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_media_player">ES Médialejátszó</string>
+    <string name="app_note_editor">ES szövegszerkesztő</string>
+    <string name="app_image_browser">ES Képnézegető</string>
+    <string name="app_zip_viewer">ES Zip megtekintő</string>
+    <string name="app_downloader">ES Letöltő</string>
+    <string name="select_device_to_share">Válassza ki a céleszközt</string>
+    <string name="es_share_name_activity">Küldés helyi hálózaton keresztül</string>
+    <string name="save_to_es">ES Mentés ide</string>
+</resources>

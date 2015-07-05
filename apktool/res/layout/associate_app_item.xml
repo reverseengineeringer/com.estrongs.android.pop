@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/dp_80"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/imageView1" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:layout_marginLeft="10.0dip" android:src="@drawable/app_pic_net_instagram" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/textView1" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="TextView" android:layout_weight="1.0" android:layout_toRightOf="@id/imageView1" android:layout_centerVertical="true" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/popupbox_radio_button_unchecked" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</LinearLayout>

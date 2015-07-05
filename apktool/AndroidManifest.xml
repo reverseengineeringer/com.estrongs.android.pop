@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.estrongs.android.pop" platformBuildVersionCode="21" platformBuildVersionName="5.0-1521886">
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name=".PERMISSION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <application android:allowBackup="true" android:banner="@drawable/tv_320_180" android:icon="@drawable/fex" android:label="@string/app_name" android:name="com.estrongs.android.pop.FexApplication" android:supportsRtl="true">
+        <meta-data android:name="com.google.android.gms.version" android:value="5077000"/>
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="66667053bc"/>
+        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="Google Market"/>
+        <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="false"/>
+        <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="ONCE_A_DAY"/>
+        <meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false"/>
+        <meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="false"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.estrongs.android.pop.view.FileExplorerActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="resource/folder"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.openintents.action.VIEW_DIRECTORY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.estrongs.android.SHOW_DISK_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.PopPreferenceActivity"/>
+        <activity android:name="com.estrongs.android.pop.app.ESNetSettingActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.RecommAcitivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.RecommItemDetailAcitivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.RecommItemImageViewer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.OpenRecomm" android:theme="@style/common_alert_dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:name="com.estrongs.android.ui.view.CreateOAuthNetDisk" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.view.PcsThirdPartOAuth" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.view.CreateOAuthServiceProvider" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_zipviewer" android:name="com.estrongs.android.pop.app.compress.CompressionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:label="@string/app_zip_viewer">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_zipviewer" android:name="com.estrongs.android.pop.app.compress.CompressionProxyActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:label="@string/app_zip_viewer">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/zip"/>
+                <data android:mimeType="application/zipx"/>
+                <data android:mimeType="application/x-zip"/>
+                <data android:mimeType="application/x-rar-compressed"/>
+                <data android:mimeType="application/rar"/>
+                <data android:mimeType="application/x-gzip"/>
+                <data android:mimeType="application/x-7z-compressed"/>
+                <data android:mimeType="application/x-tar"/>
+                <data android:mimeType="application/x-bzip2"/>
+                <data android:mimeType="application/vnd.ms-cab-compressed"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_share" android:name="com.estrongs.android.pop.app.ESFileSharingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:label="@string/select_device_to_share">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@string/es_share_name_activity">	　　 <action android:name="android.intent.action.SEND"/>	　　 <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/es_share_name_activity">
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_share" android:name="com.estrongs.android.pop.app.SaveToESActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:label="@string/save_to_es">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@string/save_to_es">	　　 <action android:name="android.intent.action.SEND"/>	　　 <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/save_to_es">
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_share" android:label="@string/select_device_to_share" android:name="com.estrongs.android.pop.app.LocalFileSharingActivity" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter android:label="@string/select_device_to_share">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.FileSharingNotificationActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_mediaplayer" android:label="@string/app_media_player" android:launchMode="singleTask" android:name="com.estrongs.android.pop.app.PopVideoPlayer">
+            <intent-filter android:label="@string/app_media_player">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_mediaplayer" android:label="@string/es_chromecast_player" android:launchMode="singleTask" android:name="com.estrongs.android.pop.app.PopChromecastPlayer"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_mediaplayer" android:label="@string/app_media_player" android:name="com.estrongs.android.pop.app.PopVideoPlayerProxyActivity">
+            <intent-filter android:label="@string/app_media_player">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="video/mp4"/>
+                <data android:mimeType="video/3gpp"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_media_player">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:mimeType="video/mp4"/>
+                <data android:mimeType="video/3gpp"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/icon_app_musicplayer" android:label="@string/app_media_player" android:launchMode="singleTask" android:name="com.estrongs.android.pop.app.AudioPlayerProxyActivity">
+            <intent-filter android:label="@string/app_media_player">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="audio/mpeg"/>
+                <data android:mimeType="audio/x-wav"/>
+                <data android:mimeType="audio/mid"/>
+                <data android:mimeType="audio/amr"/>
+                <data android:mimeType="audio/ogg"/>
+                <data android:mimeType="audio/x-mpegurl"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_media_player">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:mimeType="audio/mpeg"/>
+                <data android:mimeType="audio/x-wav"/>
+                <data android:mimeType="audio/amr"/>
+                <data android:mimeType="audio/ogg"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.estrongs.android.pop.app.StreamingMediaPlayer"/>
+        <service android:exported="false" android:icon="@drawable/icon_app_musicplayer" android:name="com.estrongs.android.pop.app.AudioPlayerService"/>
+        <receiver android:name=".app.AudioPlayerService$MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name=".app.CampaignReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:icon="@drawable/icon_app_noteeditor" android:label="@string/app_note_editor" android:name="com.estrongs.android.pop.app.editor.PopNoteEditor" android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter android:label="@string/app_note_editor">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_noteeditor" android:label="@string/app_note_editor" android:launchMode="singleInstance" android:name="com.estrongs.android.pop.app.BTPopNoteEditor" android:theme="@android:style/Theme.Light"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.estrongs.android.pop.app.FileChooserActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="com.estrongs.action.PICK_FILE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.estrongs.action.PICK_FILE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.estrongs.action.PICK_DIRECTORY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.estrongs.action.PICK_DIRECTORY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.estrongs.android.pop.app.ESContentChooserActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.estrongs.android.pop.app.ESRingtoneChooserActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.RINGTONE_PICKER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.estrongs.android.pop.app.ESWallPaperChooserActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:name="com.estrongs.android.pop.app.imageviewer.CropImage"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_imagebrowser" android:label="@string/app_image_browser" android:name="com.estrongs.android.pop.app.imageviewer.ViewImage21"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:icon="@drawable/icon_app_imagebrowser" android:label="@string/app_image_browser" android:name="com.estrongs.android.pop.app.imageviewer.ViewImage"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_imagebrowser" android:label="@string/app_image_browser" android:name="com.estrongs.android.pop.app.ImageCommentActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.ImageCommentPostActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.estrongs.android.pop.app.imageviewer.Wallpaper"/>
+        <service android:name="com.estrongs.android.pop.bt.OBEXFtpServerService">
+            <intent-filter>
+                <action android:name="android.intent.action.START_OBEX_FTP_SERVER"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.estrongs.files" android:exported="true" android:grantUriPermissions="true" android:name="com.estrongs.android.pop.app.FileContentProvider"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_downloader" android:label="@string/app_downloader" android:name="com.estrongs.android.pop.app.DownloaderActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:host="dwz.cn"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:host="www.estrongs.com"/>
+                <data android:path="/esshare"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_downloader" android:label="@string/app_downloader" android:name="com.estrongs.android.pop.app.BrowserDownloaderActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="ftp"/>
+                <data android:scheme="sftp"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="ftp"/>
+                <data android:scheme="sftp"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.apk"/>
+                <data android:pathPattern=".*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.apk.*"/>
+                <data android:pathPattern=".*\\.mp3"/>
+                <data android:pathPattern=".*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.mp3.*"/>
+                <data android:pathPattern=".*\\.ape"/>
+                <data android:pathPattern=".*\\.mp4"/>
+                <data android:pathPattern=".*\\.avi"/>
+                <data android:pathPattern=".*\\.wmv"/>
+                <data android:pathPattern=".*\\.wav"/>
+                <data android:pathPattern=".*\\.asf"/>
+                <data android:pathPattern=".*\\.mpg"/>
+                <data android:pathPattern=".*\\.3gp"/>
+                <data android:pathPattern=".*\\.3gpp"/>
+                <data android:pathPattern=".*\\.amr"/>
+                <data android:pathPattern=".*\\.rm"/>
+                <data android:pathPattern=".*\\.rmvb"/>
+                <data android:pathPattern=".*\\.ogg"/>
+                <data android:pathPattern=".*\\.oga"/>
+                <data android:pathPattern=".*\\.ogv"/>
+                <data android:pathPattern=".*\\.wma"/>
+                <data android:pathPattern=".*\\.doc"/>
+                <data android:pathPattern=".*\\.docx"/>
+                <data android:pathPattern=".*\\.ppt"/>
+                <data android:pathPattern=".*\\.pps"/>
+                <data android:pathPattern=".*\\.ppx"/>
+                <data android:pathPattern=".*\\.pptx"/>
+                <data android:pathPattern=".*\\.xls"/>
+                <data android:pathPattern=".*\\.xlsx"/>
+                <data android:pathPattern=".*\\.chm"/>
+                <data android:pathPattern=".*\\.txt"/>
+                <data android:pathPattern=".*\\.zip"/>
+                <data android:pathPattern=".*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.zip.*"/>
+                <data android:pathPattern=".*\\.rar"/>
+                <data android:pathPattern=".*\\.rar.*"/>
+                <data android:pathPattern=".*\\..*\\.rar.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\.rar.*"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.rar.*"/>
+                <data android:pathPattern=".*\\.pdf"/>
+                <data android:pathPattern=".*\\.torrent"/>
+                <data android:pathPattern=".*\\.mkv"/>
+                <data android:pathPattern=".*\\.swf"/>
+                <data android:pathPattern=".*\\.flv"/>
+                <data android:pathPattern=".*\\.aiff"/>
+                <data android:pathPattern=".*\\.pcs"/>
+                <data android:pathPattern=".*\\.mov"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/icon_app_imagebrowser" android:label="@string/app_image_browser" android:name="com.estrongs.android.pop.app.PopRemoteImageBrowser">
+            <intent-filter android:label="@string/app_image_browser">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|orientation|screenSize" android:name="com.estrongs.android.ui.theme.ThemeActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|orientation|screenSize" android:name="com.estrongs.android.ui.theme.ModifyThemeActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.theme.ThemeColorActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.theme.ThemeFolderActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.estrongs.android.pop.app.network.EsNetworkActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.estrongs.android.pop.ftp.ESFtpShortcut" android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.estrongs.android.ftp.ESFtpService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.preference.FtpServerPreference"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.ShowDialogActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="estrongs.intent.action.ShowDialogActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.HelpActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.PrivacyActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.ui.preference.RecyclePreference"/>
+        <service android:exported="false" android:name="com.estrongs.android.ui.notification.ESTaskService"/>
+        <receiver android:name="com.baidu.share.message.ShareReceiver">
+            <intent-filter>
+                <action android:name="baidu.intent.action.PCS_SHARE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.estrongs.android.pop.EnableOEMConfig">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.estrongs.android.ui.preference.TabletSettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_media_player" android:launchMode="singleTask" android:name=".app.PopAudioPlayer" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".app.GestureManageActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".app.HideListActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.baidu.sapi2.utils.LoginProtectAcitivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="adjustPan"/>
+        <receiver android:name=".app.InstallMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name=".app.InstallMonitorActivity" android:noHistory="true" android:taskAffinity="com.estrongs.android.pop.app.InstallMonitorActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name=".app.UninstallMonitorActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name=".app.AdbControllerActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.estrongs.android.pop.app.AdbControllerActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".app.AppCheckUpdateList">
+            <intent-filter>
+                <action android:name="com.estrongs.action.APP_CHECK_UPDATE_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".app.DefaultWindowSetting">
+            <intent-filter>
+                <action android:name="com.estrongs.action.DEFAULT_OPEN_WINDOW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".app.DocumentExtModifyList">
+            <intent-filter>
+                <action android:name="com.estrongs.action.DOCUMENT_EXT_MODIFY_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.estrongs.android.pop.app.service.PerformanceAccelerateService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name=".app.PerfNotifyActivity" android:noHistory="true" android:taskAffinity="com.estrongs.android.pop.app.PerfNotifyActivity" android:theme="@android:style/Theme.NoDisplay"/>
+        <receiver android:name=".app.StartServiceReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.estrongs.android.pop.app.ESUsePromptActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.estrongs.android.pop.app.ESStatisticsActivity" android:noHistory="true" android:taskAffinity="com.estrongs.android.pop.app.ESStatisticsActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enabled="false" android:label="@string/app_name" android:name=".app.UsbMonitorActivity" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"/>
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter"/>
+        </activity>
+        <activity android:launchMode="singleInstance" android:name=".app.TransitActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.estrongs.android.SHOW_DISK_USAGE"/>
+                <action android:name="com.estrongs.android.SHOW_APP_MGR"/>
+                <action android:name="com.estrongs.android.SHOW_SDCARD"/>
+                <action android:name="com.estrongs.android.SHOW_MUSIC_PLAYER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.estrongs.android.ui.pcs.SocialLoginActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/preference_open_recycle_title" android:key="enable_recycle" android:summary="@string/preference_open_recycle_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+</PreferenceScreen>

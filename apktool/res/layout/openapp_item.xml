@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/openapp_item_layout" android:layout_width="fill_parent" android:layout_height="@dimen/dp_60"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:layout_gravity="center_vertical" android:id="@id/openapp_item_icon" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/fex" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/dp_20" android:textColor="@color/popupbox_content_text" android:gravity="center|left" android:id="@id/openapp_item_text" android:layout_width="wrap_content" android:layout_height="@dimen/dp_60" android:text="ffffff" android:singleLine="true" />
+</LinearLayout>

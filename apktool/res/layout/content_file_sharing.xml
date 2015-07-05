@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/list_devices" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/content_listview_selector" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" />
+    <TextView android:textSize="@dimen/dp_14" android:textColor="@color/main_content_text" android:gravity="center" android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/es_net_target_scanning" />
+</FrameLayout>
